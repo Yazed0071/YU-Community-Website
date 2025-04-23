@@ -1,0 +1,40 @@
+[
+    {
+      "type": "event",
+      "title": "New Event: Club of Social Responsibility Workshop",
+      "message": "A new event by Club of Social Responsibility has been scheduled.",
+      "club": "Club of Social Responsibility",
+      "clubLink": "clubs/social-responsibility.html",
+      "logo": "img/social_responsibility_logo.png.jpg",
+      "date": "2025-04-22T18:30:00Z"
+    },
+    {
+      "type": "event",
+      "title": "New Event: Summer BBQ Meetup",
+      "message": "A new event by Outdoor Activities Club has been scheduled.",
+      "club": "Outdoor Activities Club",
+      "clubLink": "clubs/outdoor.html",
+      "logo": "img/outdoor_activities_logo.png.jpg",
+      "date": "2025-04-22T10:00:00Z"
+    },
+  
+    {
+      "type": "post",
+      "title": "New Post: Accounting Club Announcement",
+      "message": "A new post in Accounting Club has been published.",
+      "club": "Accounting Club",
+      "clubLink": "clubs/accounting.html",
+      "logo": "img/accounting_logo.png.jpg",
+      "date": "2025-04-21T00:00:00Z"
+    },
+    {
+      "type": "post",
+      "title": "New Post: TakeOne Announcement",
+      "message": "A new post in TakeOne has been published.",
+      "club": "TakeOne",
+      "clubLink": "clubs/takeone.html",
+      "logo": "img/takeone_logo.png",
+      "date": "2025-04-21T00:00:00Z"
+    }
+  ]
+  

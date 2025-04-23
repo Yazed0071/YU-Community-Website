@@ -1,0 +1,49 @@
+{
+    "account": [
+      {
+        "label": "Sign In",
+        "icon": "img/icons/sign-in.svg",
+        "link": "signin.html"
+      }
+    ],
+    "appSettings": [
+      {
+        "label": "Language",
+        "icon": "img/icons/globe.svg",
+        "type": "select",
+        "options": ["English", "Arabic"]
+      },
+      {
+        "label": "Dark Mode",
+        "icon": "img/icons/moon.svg",
+        "type": "toggle",
+        "key": "darkMode"
+      }
+    ],
+    "about": [
+      {
+        "label": "About This App",
+        "icon": "img/icons/info.svg",
+        "link": "about.html"
+      },
+      {
+        "label": "Contact Us",
+        "icon": "img/icons/mail.svg",
+        "link": "contact.html"
+      },
+      {
+        "label": "Terms of Service",
+        "icon": "img/icons/document.svg",
+        "link": "https://example.com/terms",
+        "external": true
+      },
+      {
+        "label": "Privacy Policy",
+        "icon": "img/icons/hand.svg",
+        "link": "https://example.com/privacy",
+        "external": true
+      }
+    ],
+    "version": "1.0.0"
+  }
+  

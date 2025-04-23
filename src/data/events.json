@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2025-04-22",
+    "title": "Club of Social Responsibility Workshop",
+    "club": "Club of Social Responsibility",
+    "clubLink": "clubs/social-responsibility.html",
+    "description": "A workshop organized by Club of Social Responsibility to enhance skills and knowledge",
+    "location": "YU Campus, Building 7, Room 316",
+    "allDay": false,
+    "startTime": "12:30",
+    "endTime": "14:30"
+  },
+  {
+    "date": "2025-04-22",
+    "title": "Summer BBQ Meetup",
+    "club": "Outdoor Activities Club",
+    "clubLink": "clubs/outdoor.html",
+    "description": "End-of-semester BBQ to celebrate spring",
+    "location": "YU Campus Lawn",
+    "allDay": true,
+    "startTime": "10:00",
+    "endTime": null
+  },
+  {
+    "date": "2025-04-25",
+    "title": "Campus Hackathon",
+    "club": "Tech Club",
+    "clubLink": "clubs/tech.html",
+    "description": "24‑hour coding marathon with prizes",
+    "location": "Engineering Building, Room 202",
+    "allDay": true,
+    "startTime": "09:00",
+    "endTime": "12:00"
+  }
+]

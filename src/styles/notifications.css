@@ -1,0 +1,153 @@
+/* ============ Base & Layout ============ */
+html { font-size: 16px; }
+body {
+  font-size: 1rem; font-family: 'Segoe UI', sans-serif;
+  margin: 0; padding: 0; background: #fdfdfd; color: #222;
+}
+
+/* ============ Header & Footer ============ */
+header, footer {
+  background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 40px; position: sticky; top: 0; z-index: 1000;
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 40px; }
+header strong { font-size: 1.1rem; }
+nav a {
+  font-size: 1.05rem; margin-left: 20px;
+  text-decoration: none; color: #333; font-weight: 500;
+  transition: color .2s;
+}
+nav a:hover { color: #f58220; }
+nav a.active {
+  color: #f58220; font-weight: bold;
+  border-bottom: 2px solid #f58220;
+}
+footer {
+  text-align: center; font-size: .9rem; color: #888;
+  padding: 24px; border-top: 1px solid #ddd; margin-top: 40px;
+}
+
+/* ============ Main & Heading ============ */
+main {
+  max-width: 960px; margin: 40px auto; padding: 0 32px;
+}
+h1 {
+  font-size: 2rem; margin-bottom: 16px; color: #111;
+}
+
+/* ============ Mark All ============ */
+.mark-all {
+  float: right; background: none; border: none;
+  color: #f58220; font-size: 1rem; cursor: pointer;
+  margin-bottom: 24px;
+}
+.mark-all:hover { text-decoration: underline; }
+
+/* ============ Tabs ============ */
+.tabs {
+  display: flex; gap: 16px; margin-bottom: 32px;
+}
+.tab {
+  padding: 8px 20px; border-radius: 20px;
+  border: 1px solid #ddd; background: #f7f7f7;
+  font-size: 1rem; cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+.tab.active {
+  background: #f58220; border-color: #f58220; color: #fff;
+}
+.tab:not(.active):hover {
+  background: #eee;
+}
+
+/* ============ List & Cards ============ */
+.notifications-list {
+  display: flex; flex-direction: column; gap: 24px;
+}
+.notification-card {
+  display: flex; align-items: flex-start;
+  background: #e7e7e7; border-radius: 10px;
+  padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+.notification-icon {
+  flex-shrink: 0; width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-right: 16px;
+}
+.notification-icon.event {
+  background: #dff4dd; color: #519A51;
+}
+.notification-icon.post {
+  background: #dde8f8; color: #2a4fc7;
+}
+.notification-content {
+  flex: 1;
+}
+.notification-content h2 {
+  margin: 0 0 8px; font-size: 1.2rem; color: #333;
+}
+.notification-content p {
+  margin: 0 0 12px; font-size: 1rem; color: #555; line-height: 1.5;
+}
+.notification-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: .9rem; color: #666;
+}
+.notification-meta .club-info {
+  display: flex; align-items: center; gap: 8px;
+}
+.notification-meta .club-info img {
+  width: 24px; height: 24px; border-radius: 50%; object-fit: cover;
+}
+.notification-meta .club-info a {
+  color: #f58220; text-decoration: none; font-weight: 600;
+}
+.notification-meta .club-info a:hover { text-decoration: underline; }
+.notification-meta .timestamp {
+  flex-shrink: 0;
+}
+
+/* ============ Empty State ============ */
+.notifications-list .empty {
+  text-align: center; color: #888; font-style: italic;
+}
+
+/* ============ Dark‑Mode Overrides ============ */
+body.dark-mode {
+  background: #222; color: #e0e0e0;
+}
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .notification-card {
+  background: #333; box-shadow: none;
+}
+body.dark-mode nav a { color: #e0e0e0; }
+body.dark-mode nav a.active,
+body.dark-mode nav a:hover { color: #f58220; }
+body.dark-mode a,
+body.dark-mode .highlight-link,
+body.dark-mode .club-link {
+  color: #f58220;
+}
+/* force notification titles visible */
+body.dark-mode .notification-content h2,
+body.dark-mode .tab,
+body.dark-mode .mark-all,
+body.dark-mode h1 {
+  color: #e0e0e0 !important;
+}
+body.dark-mode footer {color: #e0e0e0;}
+
+body.dark-mode .tab:not(.active):hover {
+  background: #222;
+}
+body.dark-mode .tab {
+  background: #333;
+}

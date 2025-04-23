@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Accounting Club Announcement",
+    "summary": "Latest news from",
+    "club": "Accounting Club",
+    "date": "21 Apr 2025",
+    "link": "clubs/accounting.html"
+  },
+  {
+    "title": "TakeOne Announcement",
+    "summary": "Latest news from",
+    "club": "TakeOne",
+    "date": "21 Apr 2025",
+    "link": "clubs/takeone.html"
+  }
+]

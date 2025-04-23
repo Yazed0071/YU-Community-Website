@@ -1,0 +1,54 @@
+{
+    "en": {
+      "nav.home": "Home",
+      "nav.clubs": "Clubs",
+      "nav.events": "Events",
+      "nav.notifications": "Notifications",
+      "nav.settings": "Settings",
+      "nav.about": "About",
+  
+      "h1.posts": "Recent Posts",
+      "h1.clubs": "Clubs",
+      "h1.events": "Events",
+      "h1.notifications": "Notifications",
+      "h1.settings": "Settings",
+  
+      "settings.account": "Account",
+      "settings.app": "App Settings",
+      "settings.about": "About",
+      "setting.signIn": "Sign In",
+      "setting.language": "Language",
+      "setting.darkMode": "Dark Mode",
+      "setting.aboutApp": "About This App",
+      "setting.contact": "Contact Us",
+      "setting.terms": "Terms of Service",
+      "setting.privacy": "Privacy Policy",
+      "setting.version": "Version"
+    },
+    "ar": {
+      "nav.home": "الرئيسية",
+      "nav.clubs": "الأندية",
+      "nav.events": "الفعاليات",
+      "nav.notifications": "الإشعارات",
+      "nav.settings": "الإعدادات",
+      "nav.about": "حول",
+  
+      "h1.posts": "أحدث المنشورات",
+      "h1.clubs": "الأندية",
+      "h1.events": "الفعاليات",
+      "h1.notifications": "الإشعارات",
+      "h1.settings": "الإعدادات",
+  
+      "settings.account": "الحساب",
+      "settings.app": "إعدادات التطبيق",
+      "settings.about": "حول",
+      "setting.signIn": "تسجيل الدخول",
+      "setting.language": "اللغة",
+      "setting.darkMode": "الوضع الداكن",
+      "setting.aboutApp": "عن التطبيق",
+      "setting.contact": "اتصل بنا",
+      "setting.terms": "شروط الخدمة",
+      "setting.privacy": "سياسة الخصوصية",
+      "setting.version": "الإصدار"
+    }
+  }

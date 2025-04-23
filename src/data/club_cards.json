@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Accounting Club",
+    "logo": "img/accounting_logo.png.jpg",
+    "link": "clubs/accounting.html"
+  },
+  {
+    "name": "TakeOne Club",
+    "logo": "img/takeone_logo.png",
+    "link": "clubs/takeone.html"
+  },
+  {
+    "name": "Marketing Club",
+    "logo": "img/marketing_logo.png.jpg",
+    "link": "clubs/marketing.html"
+  }
+]

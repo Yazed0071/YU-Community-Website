@@ -1,0 +1,141 @@
+/* ============ Base & Layout ============ */
+html { font-size: 16px; }
+body {
+  font-size: 1rem; font-family: 'Segoe UI', sans-serif;
+  margin: 0; padding: 0; background: #fdfdfd; color: #222;
+}
+
+/* ============ Header & Footer ============ */
+header, footer {
+  background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 40px; position: sticky; top: 0; z-index: 1000;
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 40px; }
+header strong { font-size: 1.1rem; }
+nav a {
+  font-size: 1.05rem; margin-left: 20px;
+  text-decoration: none; color: #333; font-weight: 500;
+  transition: color .2s;
+}
+nav a:hover { color: #f58220; }
+nav a.active {
+  color: #f58220; font-weight: bold;
+  border-bottom: 2px solid #f58220;
+}
+footer {
+  text-align: center; font-size: .9rem; color: #888;
+  padding: 24px; border-top: 1px solid #ddd; margin-top: 40px;
+}
+
+/* ============ Main & Heading ============ */
+main {
+  max-width: 960px; margin: 40px auto; padding: 0 32px;
+}
+h1 {
+  font-size: 2rem; margin-bottom: 40px; color: #111;
+}
+
+/* ============ Month Header ============ */
+.calendar-header {
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+}
+.month-nav {
+  background: none; border: none;
+  font-size: 1.6rem; color: #f58220;
+  padding: 0 16px; cursor: pointer; transition: color .2s;
+}
+.month-nav:hover { color: #d46f00; }
+#month-year {
+  font-size: 1.4rem; font-weight: 600;
+}
+
+/* ============ Calendar Grid ============ */
+#calendar-container {
+  display: grid; grid-template-columns: repeat(7,1fr);
+  gap: 8px; margin-bottom: 32px;
+}
+.calendar-day {
+  text-align: center; padding: 10px 0;
+  font-size: 1rem; border-radius: 8px;
+  cursor: pointer; transition: background .2s, color .2s;
+}
+.calendar-day:hover { background: rgba(245,130,32,0.1); }
+.calendar-day.today {
+  color: #007bff; font-weight: 600; text-decoration: underline;
+}
+.calendar-day.active {
+  background: #f58220; color: #fff;
+}
+.calendar-day.has-event::after {
+  content: ''; display: block; width: 6px; height: 6px;
+  background: #f58220; border-radius: 50%;
+  margin: 6px auto 0;
+}
+
+/* ============ Event Details ============ */
+#event-details {
+  text-align: center; color: #666; font-size: 1rem;
+}
+
+/* ============ Event Card ============ */
+.event-card {
+  position: relative; background: #e7e7e7;
+  border-radius: 10px; margin: 16px auto;
+  padding: 24px; padding-bottom: 64px; /* badge space */
+  max-width: 600px; text-align: left;
+}
+.event-card h2 {
+  margin: 0 0 12px; font-size: 1.4rem; color: #444;
+}
+/* times row */
+.times-row {
+  display: flex; justify-content: flex-end; align-items: center;
+  gap: 16px; margin-bottom: 16px;
+}
+.time-start { color: #519A51; font-weight: 600; }
+.time-end { color: #D9534F; font-weight: 600; }
+
+/* club name, description, location */
+.event-card .club-link {
+  display: block; margin-bottom: 12px;
+  font-size: 1.1rem; font-weight: 600;
+  color: #f58220; text-decoration: none;
+}
+.event-card .club-link:hover { text-decoration: underline; }
+.event-card p {
+  margin: 8px 0; line-height: 1.5; font-size: 1rem;
+}
+.event-card p:last-of-type {
+  display: flex; align-items: center; gap: 8px; color: #555;
+}
+
+/* ============ All‑Day Badge ============ */
+.all-day-badge {
+  position: absolute; bottom: 16px; left: 24px;
+  background: #007bff; color: #fff;
+  padding: 6px 16px; font-size: .85rem; border-radius: 12px;
+}
+
+/* ============ Dark‑Mode Overrides ============ */
+body.dark-mode {background: #222; color: #e0e0e0;}
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .event-card,
+body.dark-mode .club_cards-card,
+body.dark-mode .notification-card {background: #333; box-shadow: none;}
+body.dark-mode nav a { color: #e0e0e0; }
+body.dark-mode nav a.active,
+body.dark-mode nav a:hover { color: #f58220; }
+body.dark-mode a,
+body.dark-mode .highlight-link,
+body.dark-mode .club-link {  color: #f58220;}
+body.dark-mode h1 {color: #e0e0e0;}
+body.dark-mode h2 { color: #e0e0e0;}
+body.dark-mode .event-card p { color: #e0e0e0;}
+body.dark-mode #event-details {color: #e0e0e0;}
+body.dark-mode footer {color: #e0e0e0;}

@@ -1,0 +1,115 @@
+/* ============ Base & Layout ============ */
+html { font-size: 16px; }
+body {
+  font-size: 1rem; font-family: 'Segoe UI', sans-serif;
+  margin: 0; padding: 0; background: #fdfdfd; color: #222;
+}
+
+/* ============ Header & Footer ============ */
+header, footer {
+  background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 40px; position: sticky; top: 0; z-index: 1000;
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 40px; }
+header strong { font-size: 1.1rem; }
+nav a {
+  font-size: 1.05rem; margin-left: 20px;
+  text-decoration: none; color: #333; font-weight: 500;
+  transition: color .2s;
+}
+nav a:hover { color: #f58220; }
+nav a.active {
+  color: #f58220; font-weight: bold;
+  border-bottom: 2px solid #f58220;
+}
+footer {
+  text-align: center; font-size: .9rem; color: #888;
+  padding: 24px; border-top: 1px solid #ddd; margin-top: 40px;
+}
+
+/* ============ Main & Heading ============ */
+main {
+  max-width: 960px; margin: 40px auto; padding: 0 32px;
+}
+h1 {
+  font-size: 2rem; margin-bottom: 40px; color: #111;
+}
+
+/* ============ Search Bar ============ */
+.search-wrapper {
+  margin-bottom: 24px; text-align: center;
+}
+#club-search {
+  width: 100%; max-width: 400px;
+  padding: 12px 20px; font-size: 1rem;
+  border: 1px solid #ccc; border-radius: 24px;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  transition: border-color .2s, box-shadow .2s;
+}
+#club-search:focus {
+  border-color: #f58220;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ============ Grid & Cards ============ */
+.club_cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.club_cards-card {
+  background: #e7e7e7; border-radius: 12px;
+  padding: 32px 16px 40px; text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform .2s, box-shadow .2s;
+  position: relative;
+}
+.club_cards-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+.club_cards-card img {
+  width: 60px; height: 60px; border-radius: 50%;
+  object-fit: cover; margin-bottom: 12px;
+}
+.club_cards-card p {
+  margin: 12px 0 20px; font-size: 1rem; font-weight: bold;
+}
+.enter-button {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #000; color: #fff;
+  border-radius: 24px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background .2s;
+}
+.enter-button:hover { background: #333; }
+
+/* ============ Dark‑Mode Overrides ============ */
+body.dark-mode {
+  background: #222; color: #e0e0e0;
+}
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .club_cards-card {
+  background: #333; box-shadow: none;
+}
+body.dark-mode nav a { color: #e0e0e0; }
+body.dark-mode nav a.active,
+body.dark-mode nav a:hover { color: #f58220; }
+body.dark-mode a,
+body.dark-mode .highlight-link,
+body.dark-mode .club-link {
+  color: #f58220;
+}
+body.dark-mode h1 {color: #e0e0e0;}
+body.dark-mode h2 { color: #e0e0e0;}
+body.dark-mode footer {color: #e0e0e0;}
+body.dark-mode .post p,
+body.dark-mode .post small {color: #e0e0e0;}
