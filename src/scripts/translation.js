@@ -1,4 +1,3 @@
-// translation.js
 const dict = {
   en: {
     nav_home:        'Home',
@@ -55,11 +54,9 @@ const dict = {
 };
 
 function translatePage(lang) {
-  // set html lang + dir
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-  // update all data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[lang] && dict[lang][key]) {
@@ -67,23 +64,19 @@ function translatePage(lang) {
     }
   });
 
-  // update page title if tagged
   const page = document.documentElement.getAttribute('data-i18n-page');
   if (page && dict[lang][`nav_${page}`]) {
     document.title = dict[lang][`nav_${page}`] + ' – ' + dict[lang].site_title;
   }
 
-  // set select dropdown
   const sel = document.getElementById('lang-select');
   if (sel) sel.value = lang;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // initial load
   const saved = localStorage.getItem('lang') || 'en';
   translatePage(saved);
 
-  // hook dropdown
   const sel = document.getElementById('lang-select');
   if (sel) {
     sel.addEventListener('change', () => {

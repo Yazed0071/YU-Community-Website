@@ -1,11 +1,9 @@
-// Setup
 let current = new Date();  
 const monthYearEl = document.getElementById('month-year');
 const calEl       = document.getElementById('calendar-container');
 const detailsEl   = document.getElementById('event-details');
 let eventsData    = [];
 
-// Month Nav
 document.getElementById('prev-month').onclick = () => {
   current.setMonth(current.getMonth() - 1);
   renderCalendar();
@@ -15,7 +13,6 @@ document.getElementById('next-month').onclick = () => {
   renderCalendar();
 };
 
-// Fetch events once
 fetch('data/events.json')
   .then(r => r.json())
   .then(json => {
@@ -24,7 +21,6 @@ fetch('data/events.json')
   })
   .catch(console.error);
 
-// Render the calendar grid
 function renderCalendar() {
   calEl.innerHTML = '';
   const mo = current.toLocaleString('default',{ month:'long' });
@@ -41,14 +37,12 @@ function renderCalendar() {
     dayEl.className = 'calendar-day';
     dayEl.textContent = d;
 
-    // Highlight today
     const today = new Date();
     if (today.toDateString() === new Date(dateStr).toDateString()) {
       dayEl.classList.add('today','active');
       showEventsFor(dateStr);
     }
 
-    // Dot for days with events
     if (eventsData.some(e => e.date === dateStr)) {
       dayEl.classList.add('has-event');
     }
@@ -64,7 +58,6 @@ function renderCalendar() {
   }
 }
 
-// Render events for a given date
 function showEventsFor(dateStr) {
   detailsEl.innerHTML = '';
   const dayEvents = eventsData.filter(e => e.date === dateStr);
@@ -78,7 +71,6 @@ function showEventsFor(dateStr) {
     const card = document.createElement('div');
     card.className = 'event-card';
 
-    // Always show startTime, then endTime if provided
     let timesHtml = `<div class="times-row">
                        <span class="time-start">${ev.startTime}</span>`;
     if (!ev.allDay && ev.endTime) {
@@ -86,7 +78,6 @@ function showEventsFor(dateStr) {
     }
     timesHtml += '</div>';
 
-    // Badge for all‑day
     const badgeHtml = ev.allDay
       ? '<span class="all-day-badge">All Day</span>'
       : '';

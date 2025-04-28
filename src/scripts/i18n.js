@@ -1,5 +1,3 @@
-// scripts/i18n.js
-
 let _trans; 
 let _lang = localStorage.getItem('lang') || 'en';
 

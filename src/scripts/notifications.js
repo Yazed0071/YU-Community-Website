@@ -12,11 +12,9 @@ const listEl = document.querySelector('.notifications-list');
 const markAllBtn = document.querySelector('.mark-all');
 const tabs = document.querySelectorAll('.tab');
 
-// load & render
 fetch('data/notifications.json')
   .then(r => r.json())
   .then(notifs => {
-    // enrich with runtime timestamp
     notifs.forEach(n => n.timestamp = timeAgo(new Date(n.date)));
     renderList(notifs);
     setupTabs(notifs);
@@ -53,7 +51,6 @@ function renderList(notifs) {
   });
 }
 
-// tab‐filtering
 function setupTabs(allNotifs) {
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {

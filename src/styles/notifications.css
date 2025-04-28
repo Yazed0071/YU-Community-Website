@@ -136,7 +136,8 @@ body.dark-mode .highlight-link,
 body.dark-mode .club-link {
   color: #f58220;
 }
-/* force notification titles visible */
+
+
 body.dark-mode .notification-content h2,
 body.dark-mode .tab,
 body.dark-mode .mark-all,
