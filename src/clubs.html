@@ -2,12 +2,19 @@
 <html lang="en" data-i18n-page="clubs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="img/yu_community_logo.jpg" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- page title -->
   <title data-i18n="nav_clubs">Clubs – YU Community</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/club_cards.css">
+
+  <!-- Dark-mode engine -->
   <script src="scripts/theme.js" defer></script>
+  <!-- i18n engine -->
   <script type="module" src="scripts/translation.js" defer></script>
+  <!-- page logic: render & filter clubs -->
   <script src="scripts/club_cards.js" defer></script>
 </head>
 <body>
@@ -17,20 +24,30 @@
       <strong data-i18n="site_title">YU Community</strong>
     </div>
     <nav>
-      <a href="index.html"      data-i18n="nav_home">Home</a>
+      <a href="index.html"            data-i18n="nav_home">Home</a>
       <a href="clubs.html" class="active" data-i18n="nav_clubs">Clubs</a>
-      <a href="events.html"     data-i18n="nav_events">Events</a>
-      <a href="notifications.html" data-i18n="nav_notifications">Notifications</a>
-      <a href="settings.html"   data-i18n="nav_settings">Settings</a>
-      <a href="about.html"      data-i18n="nav_about">About</a>
+      <a href="events.html"           data-i18n="nav_events">Events</a>
+      <a href="notifications.html"    data-i18n="nav_notifications">Notifications</a>
+      <a href="settings.html"         data-i18n="nav_settings">Settings</a>
+      <a href="about.html"            data-i18n="nav_about">About</a>
     </nav>
   </header>
 
   <main>
     <h1 data-i18n="nav_clubs">Clubs</h1>
+
+    <!-- SEARCH -->
+    <div class="search-wrapper">
+      <input
+        id="club-search"
+        type="text"
+        data-i18n="[placeholder]search_clubs"
+        placeholder="🔍 Search clubs…" />
+    </div>
+    
     <div id="club_cards-container" class="club_cards-grid"></div>
   </main>
 
-  <footer data-i18n="footer_text">© 2025 YU Community. All rights reserved.</footer>
+  <footer data-i18n="footer_text">© 2025 YU Community. All rights reserved.</footer>
 </body>
 </html>
