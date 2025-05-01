@@ -10,11 +10,11 @@
     },
     {
       "type": "event",
-      "title": "New Event: Summer BBQ Meetup",
-      "message": "A new event by Outdoor Activities Club has been scheduled.",
-      "club": "Outdoor Activities Club",
+      "title": "VR",
+      "message": "A new event VR.",
+      "club": "GDSC",
       "clubLink": "clubs/outdoor.html",
-      "logo": "img/outdoor_activities_logo.png.jpg",
+      "logo": "img/gdsc_logo.png.jpg",
       "date": "2025-04-22T10:00:00Z"
     },
   
